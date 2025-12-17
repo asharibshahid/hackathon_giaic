@@ -1,0 +1,195 @@
+.fab {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 1200;
+  background: linear-gradient(140deg, #5a3cf1, #7d5df6);
+  color: #ffffff;
+  border: none;
+  border-radius: 999px;
+  padding: 0.9rem 1.4rem;
+  font-weight: 700;
+  box-shadow: 0 16px 30px rgba(90, 60, 241, 0.3);
+  cursor: pointer;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.fab:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 36px rgba(90, 60, 241, 0.36);
+}
+
+.panel {
+  position: fixed;
+  top: 0;
+  right: -420px;
+  width: 360px;
+  max-width: 90%;
+  height: 100vh;
+  background: #ffffff;
+  box-shadow: -6px 0 24px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  transition: right 0.25s ease;
+  z-index: 1300;
+  border-left: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.panelOpen {
+  right: 0;
+}
+
+.panelHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 1.1rem 1rem 0.8rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  background: linear-gradient(160deg, rgba(90, 60, 241, 0.08), rgba(124, 90, 255, 0.05));
+}
+
+.panelTitle {
+  font-weight: 800;
+  color: #141633;
+}
+
+.panelSubtitle {
+  color: #4a4d66;
+  font-size: 0.9rem;
+  margin-top: 0.1rem;
+}
+
+.closeBtn {
+  background: transparent;
+  border: none;
+  font-size: 1.3rem;
+  cursor: pointer;
+  color: #333;
+  line-height: 1;
+}
+
+.messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1rem;
+  background: #f9f9fb;
+}
+
+.message {
+  margin-bottom: 0.85rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.meta {
+  font-size: 0.8rem;
+  color: #6b6e86;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.bubble {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 0.75rem 0.9rem;
+  line-height: 1.4;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  color: #1e2030;
+}
+
+.assistant .bubble {
+  background: #f0edff;
+  border-color: rgba(90, 60, 241, 0.15);
+}
+
+.user .bubble {
+  background: #ffffff;
+}
+
+.inputArea {
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background: #ffffff;
+}
+
+.inputArea textarea {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  padding: 0.75rem;
+  resize: none;
+  font-family: inherit;
+  outline: none;
+  transition: border 0.16s ease, box-shadow 0.16s ease;
+  min-height: 96px;
+}
+
+.inputArea textarea:focus {
+  border-color: rgba(90, 60, 241, 0.4);
+  box-shadow: 0 0 0 3px rgba(90, 60, 241, 0.12);
+}
+
+.sendBtn {
+  align-self: flex-end;
+  padding: 0.65rem 1.1rem;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(120deg, #5a3cf1, #7d5df6);
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 10px 24px rgba(90, 60, 241, 0.22);
+  transition: transform 0.16s ease, box-shadow 0.16s ease;
+}
+
+.sendBtn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.sendBtn:not(:disabled):hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(90, 60, 241, 0.28);
+}
+
+.emptyState {
+  background: #ffffff;
+  border: 1px dashed rgba(90, 60, 241, 0.3);
+  border-radius: 12px;
+  padding: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.emptyTitle {
+  font-weight: 700;
+  color: #1e2030;
+  margin-bottom: 0.6rem;
+}
+
+.suggestionRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.suggestion {
+  border: none;
+  border-radius: 999px;
+  padding: 0.45rem 0.8rem;
+  background: rgba(90, 60, 241, 0.08);
+  color: #3b2ab7;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+@media (max-width: 640px) {
+  .panel {
+    width: 100%;
+    right: -100%;
+  }
+}

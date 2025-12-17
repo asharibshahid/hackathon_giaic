@@ -1,0 +1,257 @@
+:root {
+  --ifm-color-primary: #5a3cf1;
+  --ifm-color-primary-dark: #4b2fe3;
+  --ifm-color-primary-darker: #4128d0;
+  --ifm-color-primary-darkest: #2f1ea8;
+  --ifm-color-primary-light: #6a4ff3;
+  --ifm-color-primary-lighter: #7a60f5;
+  --ifm-color-primary-lightest: #8f77f8;
+  --ifm-font-family-base: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --ifm-code-font-size: 95%;
+  --ifm-background-color: #f8f9fb;
+  --ifm-navbar-background-color: #ffffff;
+  --ifm-footer-background-color: #0f1024;
+  --ifm-link-color: #4b2fe3;
+  --hpai-card-shadow: 0 12px 30px rgba(39, 19, 94, 0.08);
+  --hpai-border: 1px solid rgba(33, 37, 41, 0.06);
+}
+
+[data-theme='dark'] {
+  --ifm-color-primary: #9ca8ff;
+  --ifm-color-primary-dark: #7d8fff;
+  --ifm-color-primary-darker: #6a80ff;
+  --ifm-color-primary-darkest: #5567e0;
+  --ifm-color-primary-light: #afb8ff;
+  --ifm-color-primary-lighter: #c4cbff;
+  --ifm-color-primary-lightest: #d8ddff;
+  --ifm-background-color: #0f1024;
+  --ifm-navbar-background-color: #141633;
+  --ifm-footer-background-color: #0b0c1c;
+  --hpai-border: 1px solid rgba(255, 255, 255, 0.08);
+  --hpai-card-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+body {
+  background: #ffffff;
+  color: #1c1e24;
+}
+
+.navbar {
+  box-shadow: 0 10px 30px rgba(18, 18, 36, 0.08);
+}
+
+.hpaiHero {
+  background: radial-gradient(circle at 20% 20%, rgba(90, 60, 241, 0.14), transparent 40%),
+    radial-gradient(circle at 80% 10%, rgba(124, 90, 255, 0.12), transparent 35%),
+    #ffffff;
+  text-align: center;
+  padding: 6rem 1rem 5rem;
+}
+
+.hpaiBadge {
+  display: inline-block;
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+  background: linear-gradient(120deg, #5a3cf1, #8f77f8);
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.3px;
+  box-shadow: 0 8px 20px rgba(90, 60, 241, 0.25);
+}
+
+.hpaiTitle {
+  font-size: clamp(2.6rem, 4vw, 3.8rem);
+  margin: 1.25rem 0 0.6rem;
+  color: #0e0f1d;
+  letter-spacing: -0.02em;
+}
+
+.hpaiSubtitle {
+  color: #4a4d66;
+  max-width: 680px;
+  margin: 0.3rem auto 1rem;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.hpaiPills {
+  display: flex;
+  justify-content: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin: 1.1rem 0 1.8rem;
+}
+
+.hpaiPill {
+  padding: 0.45rem 0.85rem;
+  border-radius: 999px;
+  background: rgba(90, 60, 241, 0.08);
+  color: #3b2ab7;
+  font-weight: 600;
+  border: var(--hpai-border);
+}
+
+.hpaiBtns {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 1.4rem;
+  flex-wrap: wrap;
+}
+
+.hpaiPrimary,
+.hpaiSecondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.4rem;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 0.98rem;
+  text-decoration: none;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.hpaiPrimary {
+  background: linear-gradient(120deg, #5a3cf1, #7d5df6);
+  color: #ffffff;
+  box-shadow: 0 12px 24px rgba(90, 60, 241, 0.25);
+}
+
+.hpaiPrimary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 32px rgba(90, 60, 241, 0.3);
+}
+
+.hpaiSecondary {
+  background: #ffffff;
+  color: #3b2ab7;
+  border: 1px solid rgba(90, 60, 241, 0.2);
+  box-shadow: 0 8px 20px rgba(17, 18, 46, 0.05);
+}
+
+.hpaiSecondary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+}
+
+.hpaiSection {
+  padding: 4.5rem 1rem;
+  background: #ffffff;
+}
+
+.hpaiSection:nth-of-type(even) {
+  background: #f6f7fb;
+}
+
+.hpaiSectionHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.hpaiSection h2 {
+  font-size: clamp(2rem, 3vw, 2.6rem);
+  margin: 0.3rem 0;
+  color: #0e0f1d;
+}
+
+.hpaiGrid {
+  display: grid;
+  gap: 1.4rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.hpaiCard {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 1.4rem;
+  border: var(--hpai-border);
+  box-shadow: var(--hpai-card-shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  height: 100%;
+}
+
+.hpaiCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px rgba(39, 19, 94, 0.14);
+}
+
+.hpaiCard h3 {
+  margin: 0.6rem 0 0.35rem;
+  color: #1c1e24;
+}
+
+.hpaiCard p {
+  margin: 0;
+  color: #4a4d66;
+  line-height: 1.55;
+}
+
+.hpaiCardIcon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(90, 60, 241, 0.08);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: #3b2ab7;
+}
+
+.hpaiHighlights .hpaiCard {
+  background: linear-gradient(140deg, rgba(90, 60, 241, 0.06), rgba(124, 90, 255, 0.02));
+}
+
+.hpaiCtaBand {
+  background: linear-gradient(110deg, #4b2fe3, #7d5df6);
+  color: #ffffff;
+  padding: 3.5rem 1rem;
+}
+
+.hpaiCtaBand .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+
+.hpaiCtaBand h3 {
+  margin: 0.2rem 0 0.4rem;
+  font-size: clamp(1.8rem, 2.6vw, 2.3rem);
+}
+
+.hpaiCtaBand .hpaiSubtitle {
+  color: rgba(255, 255, 255, 0.82);
+  margin: 0;
+}
+
+.hpaiCtaBand .hpaiPrimary {
+  background: #ffffff;
+  color: #3b2ab7;
+  box-shadow: 0 10px 30px rgba(12, 11, 41, 0.3);
+}
+
+@media (max-width: 768px) {
+  .hpaiSectionHead {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hpaiBtns {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .hpaiPrimary,
+  .hpaiSecondary {
+    width: 100%;
+  }
+}
